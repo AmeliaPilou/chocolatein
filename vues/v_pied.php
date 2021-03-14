@@ -38,10 +38,11 @@
                         <p class="mb-4">Abonnez-vous à notre infolettre pour être toujours informé(e) de nos dernières nouveautés ! Notre lettre d'informations est envoyée environ une fois par mois.</p>
                         <div class="p-1 rounded border">
                             <form class="input-group" action="?uc=inscriptionInfolettre" method="post">
-                                <input name="email" type="email" placeholder="Saisir votre adresse de courriel" aria-describedby="infolettre" class="form-control border-0 shadow-0">
+                                <input name="email" type="email" placeholder="Saisir votre adresse de courriel" aria-describedby="infolettre" class="form-control border-0 shadow-0" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-z]{2,}$">
                                 <div class="input-group-append">
                                     <button id="infolettre" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
                                 </div>
+                                <div class="invalid-feedback text-center">Veuillez saisir un email valide.</div>
                             </form>
                         </div>
                     </div>
