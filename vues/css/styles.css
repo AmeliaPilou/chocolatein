@@ -1,0 +1,80 @@
+@font-face{ 
+    font-family: "BerkshireSwash-Regular";
+    src: local("BerkshireSwash-Regular"), url('polices/BerkshireSwash-Regular.ttf') format("truetype");
+}
+:root {
+    --chocolat: #654B3A;
+    --vertanis: #a8fa57;
+}
+* {
+    font-family: "BerkshireSwash-Regular";
+    color: var(--chocolat) !important;
+    margin:0;
+}
+/* Style pour le séparateur de fil d'ariane  */
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--chocolat) !important;
+    content: "❱";
+}
+header img {
+    margin: 0 auto;
+    display: block;
+    width: 1170px;
+    height: 140px;
+    max-width: 100%;
+}
+.navbar a:hover, .navbar li:hover, .navbar-brand a:hover {
+    background-color: var(--vertanis);
+    color: black;
+}
+.navbar {
+    padding: 0;
+}
+.dropdown-menu, .dropdown-item, .dropdown-divider {
+    padding: 0;
+    margin: 0;
+}
+.nav-item, .dropdown-item {
+    padding: 8px;
+}
+footer hr {
+    margin-top: 0;
+    border-color: var(--chocolat);
+    width: 160px;
+}
+hr.copyrights {
+    margin: 5px auto;
+}
+.btn-choc {
+    background-color: var(--chocolat);
+    border-color: #110a05;
+    color: white !important;
+    font-size: small;
+}
+.btn-choc i {
+    color: white !important;
+}
+article.card {
+    border:0;
+}
+h1 .annotation {
+    font-size: 65%;
+    color: #777 !important;
+}
+.border-choc {
+    border: 1px solid var(--chocolat);
+}
+.border-choc:hover {
+    border: 1px solid var(--chocolat);
+    box-shadow: 0 3px 7px 0 var(--chocolat);
+}
+.card-title:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+footer h5 {
+    font-weight: bold;
+}
+.invalid-feedback {
+    color: #dc3545!important;
+}
