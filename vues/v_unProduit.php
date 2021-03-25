@@ -16,8 +16,16 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent px-0">
         <li class="breadcrumb-item"><a href="?uc=accueil"><i class="fas fa-home"></i></a></li>
-        <li class="breadcrumb-item"><a href="?uc=gamme">Gamme</a></li>
-        <li class="breadcrumb-item"><a href="?uc=gamme&nom=<?= $idGamme ?>"><?= $laGamme ?></a></li>
+        <?php
+        if (isset($recherche)) {
+            echo '<li class="breadcrumb-item"><a href="?uc=recherche&recherche=' . $recherche . '">Retour aux résultats de la recherche (' . $recherche . ')</a></li>';
+        } else {
+            ?>
+            <li class="breadcrumb-item"><a href="?uc=gamme">Gamme</a></li>
+            <li class="breadcrumb-item"><a href="?uc=gamme&nom=<?= $idGamme ?>"><?= $laGamme ?></a></li>
+            <?php
+        }
+        ?>
         <li class="breadcrumb-item active" aria-current="page"><?= $title ?></li>
     </ol>
 </nav>

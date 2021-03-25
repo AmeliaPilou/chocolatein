@@ -187,4 +187,21 @@ class PdoChoc {
         return $requetePrepare->execute();
     }
 
+    /**
+     * Retourne tous les produits qui contiennent l'expression recherchée
+     *
+     * @return un tableau associatif
+     */
+    public function getListeProduits($expression) {
+        // Ajout des caractères jokers à notre expression
+        $expression = "%" . $expression . "%";
+        $requetePrepare = PdoChoc::$monPdo->prepare(
+                'SELECT DISTINCT produit.* FROM produit '
+                . 'WHERE nom LIKE :uneExpression'
+        );
+        $requetePrepare->bindParam(':uneExpression', $expression, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        return $requetePrepare->fetchAll();
+    }
+
 }

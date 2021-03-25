@@ -90,6 +90,11 @@
                             <a class="nav-link" href="https://www.facebook.com/Chocolate.In.Bordeaux" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
                         </li>
                     </ul>
+                    <form class="form-inline mr-2 rounded border" method="get">
+                        <input name="uc" type="hidden" value="recherche">
+                        <input name="recherche" type="text" placeholder="Recherche" aria-describedby="infolettre" class="form-control border-0 shadow-0">
+                        <button type="submit" class="btn btn-link"><i class="fa fa-search"></i></button>
+                    </form>
                 </div>
             </nav>
             <!-- Contenu qui occupe au minimum toute la place restant sur un écran -->

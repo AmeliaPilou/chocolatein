@@ -39,7 +39,7 @@
                     <small class="card-text"><?= $descriptionPdt ?></small>
                 </div>
                 <small class="card-body py-0">
-                    <a href="?uc=produit&produit=<?= $idPdt ?>" class="btn btn-choc mb-2 p-1">Plus d'infos</a>
+                    <a href="?uc=produit&produit=<?= $idPdt ?><?php if (isset($recherche)) { echo "&recherche=".$recherche; } ?>" class="btn btn-choc mb-2 p-1">Plus d'infos</a>
                 </small>
             </div>
         </article>

@@ -32,6 +32,9 @@ switch ($uc) {
     case 'inscriptionInfolettre':
         include './controleurs/c_inscriptionInfolettre.php';
         break;
+    case 'recherche':
+        include './controleurs/c_recherche.php';
+        break;
     default:
         include './controleurs/c_404.php';
 }
