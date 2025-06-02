@@ -12,7 +12,7 @@
  * @version   GIT: <0>
  * @link      https://chocolatein.gil83.fr Contexte « Chocolate'In »
  */
-$recherche = filter_input(INPUT_GET, 'recherche', FILTER_SANITIZE_STRING);
+$recherche = filter_input(INPUT_GET, 'recherche', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $lesProduits = $pdo->getListeProduits($recherche);
 $title = "Recherche : " . $recherche;
 include './vues/v_listeProduits.php';
