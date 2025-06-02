@@ -13,7 +13,7 @@
  * @version   GIT: <0>
  * @link      https://chocolatein.gil83.fr Contexte « Chocolate'In »
  */
-$produit = filter_input(INPUT_GET, 'produit', FILTER_SANITIZE_STRING);
+$produit = filter_input(INPUT_GET, 'produit', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $lesIdProduits = $pdo->getLesIdProduit();
 if (in_array($produit, $lesIdProduits)) {
     $leProduit = $pdo->getLeProduit($produit);

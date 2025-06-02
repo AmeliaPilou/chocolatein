@@ -13,7 +13,7 @@
  * @version   GIT: <0>
  * @link      https://chocolatein.gil83.fr Contexte « Chocolate'In »
  */
-$nom = filter_input(INPUT_GET, 'nom', FILTER_SANITIZE_STRING);
+$nom = filter_input(INPUT_GET, 'nom', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 if (empty($nom)) {
     $nom = 'toutes';
 }
